@@ -19,7 +19,7 @@ export default function ChatWindow({ chat, user, api, refreshChats }) {
     if (!api) return;
     setLoading(true);
     try {
-      //const { messages: msgs, nextCursor: cursor } = await api.getMessages(chat.id, { limit: 30 });
+      const { messages: msgs, nextCursor: cursor } = await api.getMessages(chat.id, { limit: 30 });
       setMessages(msgs);
       setNextCursor(cursor);
       setHasMore(!!cursor);
