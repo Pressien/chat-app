@@ -1,0 +1,11 @@
+/* minimal global */
+:root {
+  --bg: #0f1724;
+  --panel: #0b1220;
+  --muted: #9aa6b2;
+  --accent: #308695;
+  --card: #0f1724;
+}
+
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; margin: 0; font-family: Inter, system-ui, Arial; background: #071225; color: #e6eef4; }
