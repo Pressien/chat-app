@@ -47,7 +47,7 @@ export default function ChatWindow({ chat, user, api, refreshChats }) {
     setLoading(true);
     try {
       const prevScroll = scrollRef.current?.scrollHeight || 0;
-      const { messages: older, nextCursor: cursor } = await api.getMessages(chat.id, { limit: 30, before: oldest });
+      const { messages: msgs, nextCursor } = await api.getMessages(chat.id, { limit: 30 });
       if (!older || older.length === 0) {
         setHasMore(false);
       } else {
